@@ -1,5 +1,7 @@
 package za.co.services;
 
+import java.util.List;
+
 import javax.ejb.*;
 import javax.persistence.*;
 
@@ -15,8 +17,17 @@ public class TransactionEJB {
 	public TransactionEJB () {}
 	
 	public void addNew (TransactionEntity transactionEntity) {
-		TransactionEntity transaction = new TransactionEntity();
-		
+		System.out.println("----------------------");
+		System.out.println(transactionEntity.getName());
+		em.persist(transactionEntity);
+		System.out.println("----------------------");
+	}
+	
+	public List<TransactionEntity> findTransactions(){
+		System.out.println("loading all transactions");
+		Query query = em.createQuery("FROM TransactionEntity");
+		List<TransactionEntity> transaction = query.getResultList();
+		return transaction;
 	}
 	
 

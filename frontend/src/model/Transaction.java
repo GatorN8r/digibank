@@ -5,8 +5,7 @@ import java.util.Date;
 
 import javax.inject.Named;
 import javax.enterprise.context.*;
-import entities.TransactionEntity;
-
+import za.co.entities.*;
 import jdk.jfr.Name;
 
 

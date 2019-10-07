@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Digibank Money Transfer</title>
+</h:head>
+<h:body>
+	<h2>DigiBank</h2>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="First Name : " />
+			<h:inputText value="#{transactioncontroller.transaction.name}"></h:inputText>
+			<h:outputLabel value="Source Passport : " />
+			<h:inputText value="#{transactioncontroller.transaction.sourcePassport}"></h:inputText>
+			<h:outputLabel value="Destination Passsport : " />
+			<h:inputText value="#{transactioncontroller.transaction.destinationPassport}"></h:inputText>
+			<h:outputLabel value="Destination Bank : " />
+			<h:inputText value="#{transactioncontroller.transaction.destinationBank}"></h:inputText>
+			<h:outputLabel value="Destination Country : " />
+			<h:inputText value="#{transactioncontroller.transaction.destinationCountry}"></h:inputText>
+			<h:outputLabel value="Account Number : " />
+			<h:inputText value="#{transactioncontroller.transaction.accountNumber}"></h:inputText>
+			<h:outputLabel value="Amount : " />
+			<h:inputText value="#{transactioncontroller.transaction.amount}"></h:inputText>
+		</h:panelGrid>
+		<h:commandButton value="submit"
+			action="#{transactioncontroller.addNewtransaction}"></h:commandButton>
+	</h:form>
+</h:body>
+</html>
