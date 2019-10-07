@@ -77,6 +77,7 @@ public class Transaction implements Serializable {
 		TransactionEntity transactionEntity = new TransactionEntity();
 		transactionEntity.setTransactionCode(transactionCode);
 		transactionEntity.setName(name);
+		transactionEntity.setSourcePassport(sourcePassport);
 		transactionEntity.setDestinationPassport(destinationPassport);
 		transactionEntity.setDestinationBank(destinationBank);
 		transactionEntity.setDestinationCountry(destinationCountry);
