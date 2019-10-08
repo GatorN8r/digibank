@@ -1,9 +1,6 @@
 package model;
 
 import java.io.Serializable;
-import java.util.Date;
-
-import javax.inject.Named;
 import javax.enterprise.context.*;
 import za.co.entities.*;
 import jdk.jfr.Name;

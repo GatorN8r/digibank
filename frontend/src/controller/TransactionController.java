@@ -37,7 +37,7 @@ public class TransactionController {
 	}
 	
 	public String viewTransaction () {	
-		return "transaction.xhtml";
+		return "transactionList.xhtml";
 	}
 	
 	public String addNewTransaction() {
@@ -45,7 +45,7 @@ public class TransactionController {
 		transactionEJB.addNew(transaction.getEntity());
 		
 		transactionEJB.findTransactions();
-		return "transaction.xhtml";
+		return "transactionList.xhtml";
 	}
 	
 	

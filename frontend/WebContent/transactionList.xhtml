@@ -18,22 +18,42 @@
     	</f:facet>
     	#{x.name}
     	</h:column>
-
-
 		<h:column>
 			<f:facet name="header">
-    	Surname
+    	Source Passport
     	</f:facet>
-    	#{x.surName}
+    	#{x.sourcePassport}
     	</h:column>
-
 		<h:column>
 			<f:facet name="header">
-    	Date Of birth
+    	Destination Passport
     	</f:facet>
-    	#{x.dateOfBirth}
+    	#{x.destinationPassport}
     	</h:column>
-
+		<h:column>
+			<f:facet name="header">
+    	Destination Bank
+    	</f:facet>
+    	#{x.destinationBank}
+    	</h:column>
+    	<h:column>
+			<f:facet name="header">
+    	Destination Country
+    	</f:facet>
+    	#{x.destinationCountry}
+    	</h:column>
+    	<h:column>
+			<f:facet name="header">
+    	Account Number
+    	</f:facet>
+    	#{x.accountNumber}
+    	</h:column>
+    	<h:column>
+			<f:facet name="header">
+    	Amount
+    	</f:facet>
+    	#{x.amount}
+    	</h:column>
 	</h:dataTable>
 </h:body>
 </html>
