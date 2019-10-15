@@ -3,8 +3,19 @@
   <groupId>frontend</groupId>
   <artifactId>frontend</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
   
   <dependencies>
+   <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+   <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
   <dependency>
     <groupId>javax.enterprise</groupId>
     <artifactId>cdi-api</artifactId>
@@ -20,7 +31,6 @@
     <artifactId>jboss-jsf-api_2.2_spec</artifactId>
     <version>2.2.14</version>
 	</dependency>
-
 	  <dependency>
 		  <groupId>captureService</groupId>
 		  <artifactId>captureService</artifactId>
@@ -29,15 +39,7 @@
   </dependencies>
   
   <build>
-    <sourceDirectory>src</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>src</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
+
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -46,6 +48,15 @@
           <release>12</release>
         </configuration>
       </plugin>
+      
+       <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+            </configuration>
+            </plugin>
+      
     </plugins>
   </build>
 </project>

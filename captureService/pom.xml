@@ -5,8 +5,7 @@
   <version>1.0</version>
   <packaging>ejb</packaging>
   
-  <dependencies>
-  
+  <dependencies> 
   	  <dependency>
 	    <groupId>javax.ejb</groupId>
 	    <artifactId>javax.ejb-api</artifactId>
@@ -21,15 +20,6 @@
   </dependencies>
   
   <build>
-    <sourceDirectory>ejbModule</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>ejbModule</directory>
-        <excludes>
-          <exclude>**/*.java</exclude>
-        </excludes>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
